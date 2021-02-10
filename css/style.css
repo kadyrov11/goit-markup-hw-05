@@ -149,7 +149,7 @@ img {
   width: 100%;
   background-color: rgba(47, 48, 58, 0.4);
 }
-.modal {
+.modal-container {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -180,8 +180,11 @@ img {
   box-sizing: border-box;
   transition: background-color 250ms linear;
 }
-.modal-icon-btn:hover {
+.modal-icon-btn:hover,
+.modal-icon-btn:focus {
   fill: var(--hover-focus-color);
+  outline: none;
+  border: solid var(--hover-focus-color);
 }
 .modal-closing-icon {
   border: 1px solid rgba(0, 0, 0, 0.2);
@@ -200,7 +203,137 @@ img {
   width: 18px;
   height: 18px;
 }
+.modal-form {
+  padding: 40px;
+}
+.modal-form-text {
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  margin-bottom: 12px;
 
+  color: #212121;
+}
+.modal-label {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  margin-top: 10px;
+  margin-bottom: 4px;
+
+  letter-spacing: 0.01em;
+
+  color: #757575;
+}
+.modal-input-container {
+  position: relative;
+  display: block;
+}
+.modal-input {
+  position: relative;
+  display: block;
+  width: 450px;
+  height: 40px;
+  padding: 15px;
+  padding-left: 42px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+.modal-icon {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  fill: #212121;
+  width: 18px;
+  height: 18px;
+}
+.modal-input:focus + .modal-icon {
+  fill: var(--hover-focus-color);
+}
+.modal-input:focus {
+  border: solid var(--hover-focus-color);
+  outline: none;
+}
+.modal-form-comments {
+  width: 450px;
+  height: 120px;
+  resize: none;
+  padding: 15px;
+  margin-bottom: 20px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+.modal-form-comments:focus {
+  border: solid var(--hover-focus-color);
+  outline: none;
+}
+.modal-form-comments:placeholder-shown {
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+
+  color: rgba(117, 117, 117, 0.5);
+}
+.conditions-link {
+  color: var(--hover-focus-color);
+  text-decoration: underline;
+}
+.modal-conditions-label {
+  position: relative;
+  display: block;
+  text-align: center;
+}
+.checkbox-hidden {
+  -webkit-appearance: none;
+  -moz-appearance: nonef;
+  appearance: none;
+}
+.check-icon {
+  display: inline-block;
+  vertical-align: top;
+  width: 16px;
+  height: 16px;
+  background-image: url(../img/check-icon.svg);
+  background-repeat: no-repeat;
+  border-radius: 2px;
+  margin-top: 4px;
+}
+.modal-checkbox-btn:checked + .check-icon {
+  background-image: url(../img/icon-checked.svg);
+}
+.modal-btn {
+  display: block;
+  margin: auto;
+  border-radius: 4px;
+  padding: 10px 32px;
+  margin-top: 30px;
+  min-width: 200px;
+  height: 50px;
+  text-align: center;
+  border: 0px;
+  color: #ffffff;
+  background-color: var(--hover-focus-color);
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.9;
+  letter-spacing: 0.06em;
+  border: none;
+
+  transition-duration: 250ms;
+}
+.modal-btn:hover,
+.modal-btn:focus {
+  color: var(--hover-focus-color);
+  background-color: #ffffff;
+  border: 2px solid var(--hover-focus-color);
+}
 /* =================================================== */
 
 /* ====================LOGO=========================== */
@@ -288,7 +421,7 @@ img {
 /* =================================================== */
 
 /* -------------------FEATURES----------------------- */
-.hidden-title {
+.visually-hidden {
   position: absolute !important;
   clip: rect(1px 1px 1px 1px);
   clip: rect(1px, 1px, 1px, 1px);
@@ -553,6 +686,23 @@ img {
   width: 20px;
   height: 20px;
 }
+.footer-form {
+  display: flex;
+}
+.footer-input {
+  width: 360px;
+  height: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-sizing: border-box;
+  background-color: rgba(47, 48, 58, 01);
+  border-radius: 4px;
+  padding: 15px;
+  outline: none;
+}
+.footer-input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+footer
 /* ================================================== */
 
 /* =================PORTFOLIO======================== */
